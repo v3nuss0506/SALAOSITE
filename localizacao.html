@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templo da Beleza</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    const video = card.querySelector("video");
+
+    card.addEventListener("mouseenter", () => {
+        video.play();
+    });
+
+    card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+</script>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            Templo da Beleza
+        </div>
+    
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="tabela.html">Tabela de Preços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="localizacao.html">Localização</a>
+    </div>
+    </div>
+
+</body>
+
+</html>

@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Templo da Beleza</title>
-    <link rel="stylesheet" href="index.css"
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
 </head>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    const video = card.querySelector("video");
+
+    card.addEventListener("mouseenter", () => {
+        video.play();
+    });
+
+    card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+</script>
+
 <body>
     <div class="navbar">
         <div class="logo">
@@ -16,10 +35,10 @@
         </div>
     
     <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#agendamentos">Agendamentos</a>
-        <a href="#contato">Contato</a>
-        <a href="#localizacao">Localização</a>
+        <a href="index.html">Home</a>
+        <a href="tabela.html">Tabela de Preços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="localizacao.html">Localização</a>
     </div>
     </div>
 
@@ -29,72 +48,74 @@
     Seja bem vinda ao Templo da Beleza!
 </h1>
 
-<h2>
-    Temos os seguintes serviços: 
-</h2>
 
 <section class="servicos">
 
+    <h2>
+        
+    Temos os seguintes serviços: 
+</h2>
+    <div class="cards"> 
+
     <div class="card">
+
     <h3> Cabelos</h3>
-        <p> Realçamos a beleza dos seus cabelos. </p>
-        <video class="video-card" muted loop> 
-        <source src="cabelos.mp4" type="video/mp4">
+        <p> Realçamos a beleza dos seus cabelos com tratamentos personalizados às suas necessidades. </p>
+        <video class="video-card" muted loop autoplay playsinline> 
+        <source src="videos/cabelos.mp4" type="video/mp4">
         </video>
     </div>
 
     <div class="card">
     <h3> Unhas</h3>
         <p> Fornecemos serviços de manicure e pedicure tradicional e também alongamento de unhas. </p>
-        <video class="video-card" muted loop> 
-        <source src="unhas.mp4" type="video/mp4">
+        <video class="video-card" muted loop autoplay playsinline> 
+        <source src="videos/unhas.mp4" type="video/mp4">
         </video>
     </div>
 
     <div class="card"> 
         <h3>Tratamentos estéticos </h3>
         <p> Fornecemos limpeza de pele, preenchimento labial, botox e outros serviços. </p>
-        <video class="video-card" muted loop> 
-        <source src="tratamentos.mp4" type="video/mp4">
+        <video class="video-card" muted loop autoplay playsinline> 
+        <source src="videos/tratamentos.mp4" type="video/mp4">
         </video>
+    </div>
     </div>
 
 </section>
 
+<section class="missao">
 
-<h2>Serviços</h2>
+<h2> NOSSA MISSÃO 
+</h2>
 
-<table> border="1">
-    <tr>
-        <th> Serviços</th>
-        <th>Descrição</th>
-        <th>Preço</th>
-    </tr>
+  <p>
+        Nossa missão é valorizar a beleza e a autoestima de cada cliente, oferecendo serviços de qualidade, atendimento acolhedor e resultados que realcem o que cada pessoa tem de único. Buscamos proporcionar uma experiência de cuidado, bem-estar e confiança, utilizando técnicas atualizadas e produtos de qualidade para garantir satisfação e excelência em cada atendimento. No Templo da Beleza, acreditamos que cuidar da aparência também é cuidar da autoestima e do amor-próprio.
 
-    <tr> 
-        <td> Corte Feminino</td>
-        <td> Corte e Finalização </td>
-        <td> R$ 60</td>
-    </tr>
+    <br> 
+    <br>
 
-    <tr>
-<td>Escova</td>
-<td>Escova modeladora</td>
-<td>R$ 40</td>
-</tr>
+    Confira nossa tabela de preços <a href="tabela.html">aqui</a>.</p>
+  </p>
 
-<tr>
-<td>Manicure</td>
-<td>Cuidado completo das unhas</td>
-<td>R$ 35</td>
-</tr>
 
-<tr>
-<td>Design de Sobrancelha</td>
-<td>Modelagem de sobrancelhas</td>
-<td>R$ 30</td>
-</tr>
+</section>
 
-</table>
+<footer class="rodape">
+
+    <h3>Templo da Beleza</h3>
+
+    <p> Whatsapp 📞: (61)98467-0748</p>
+    <p> Instagram 📷: @templodabeleza</p>
+    <p> Endereço: QN 401, Conj. E, Lote 01 </p>
+
+
+
+</footer>
+
+
+
+
 
 </html>
